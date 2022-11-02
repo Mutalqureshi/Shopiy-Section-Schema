@@ -1,0 +1,63 @@
+<div class="section Image_withText-Section">
+<div class="container">
+
+<div class="row flex-vertical">
+<div class="col-md-5">
+  <img class="Image_withText-Image" src="{{ section.settings.custom_image | img_url: 'master' }}" />  
+</div>
+<div class="col-md-7">
+ <div class="img_wiright">
+    <h2 class="Image_WithText-heading">{{ section.settings.custom_heading }}</h2>
+    <div class="Image_WithText-content">{{ section.settings.custom_textarea }}</div> 
+ </div>
+</div>
+</div>
+  
+</div> <!-- container -->
+</div> <!-- section-->
+
+
+{% schema %}
+  {
+    "name": "Image With Text",
+    "settings": [
+
+     {
+"id":  "custom_heading",
+"type":   "text",
+ "label":  "Custom Heading"       
+        
+      },
+
+    {
+"id":  "custom_textarea",
+"type":   "textarea",
+ "label":  "Custom Textarea"       
+        
+      },
+
+    {
+"id":  "custom_image",
+"type":   "image_picker",
+ "label":  "Custom Image"       
+        
+      }      
+    ],
+
+"presets": [
+{
+
+"name": "Image With Text"
+  
+}
+
+]
+    
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
